@@ -8,14 +8,19 @@ export const Faq = () => {
             <div id="faqWrap">
             <h2 id='faqH'>Faqs</h2>
             <div id='faqContainer'>
-
-                <Faqs h='can my projects deadlines be met?'
+                <Faqs h='Who are the photographers?'
                  p='Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                  Tenetur natus ipsam nisi quo magnam facere, perspiciatis in hic ea accusamus libero
                   totam provident tempore nihil vitae non laudantium atque! Iure.'
                  />
 
-                <Faqs h='do you provide warranties and guranties?'
+                <Faqs h='How quickly will I receive my project?'
+                 p='Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                 Tenetur natus ipsam nisi quo magnam facere, perspiciatis in hic ea accusamus libero
+                  totam provident tempore nihil vitae non laudantium atque! Iure.'
+                 />
+
+                <Faqs h='How much work will I get?'
                  p='Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                  Tenetur natus ipsam nisi quo magnam facere, perspiciatis in hic ea accusamus libero
                   totam provident tempore nihil vitae non laudantium atque! Iure.'

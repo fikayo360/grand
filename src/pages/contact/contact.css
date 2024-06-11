@@ -1,91 +1,96 @@
 #contact{
     width: 100vw;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    padding: 3rem 0;
-}
-
-#cWrap{
-    width: 50%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    text-align: left;
-}
-
-#cHead{
-    font-size: 1.2rem;
-}
-
-#cWrap form{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-#cWrap form input{
-    height: 3.5rem;
-    
-}
-
-#cWrap form textarea{
-    height: 8rem;
-}
-
-#cWrap form input::placeholder,#cWrap form textarea::placeholder{
-    font-size: 1rem;
-    color: #ffffff;
-}
-
-#cWrap form input,#cWrap form textarea{
-    width: 70%;
-    font-size: 1rem;
-    background-color: rgba(29, 28, 28, 0.877);
-    color: white;
-    padding:8px;
-    border-radius: 5px;
-    border: 0.1px solid black;
-}
-
-#cWrap form button{
+    min-height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(327.21deg, rgba(33, 0, 75, 0.24) 3.65%, rgba(60, 0, 136, 0) 40.32%),
+    linear-gradient(245.93deg, rgba(209, 21, 111, 0.16) 0%, rgba(209, 25, 80, 0) 36.63%), linear-gradient(147.6deg, rgba(58, 19, 255, 0) 29.79%,
+     rgba(98, 19, 255, 0.01) 85.72%), #13111C;
+}
+
+#contactCenter{
+    display: flex;
+    width: 40%;
+    min-height: 500px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding: 25px;
+    background-color:rgba(98, 54, 170, 0.089) ;
+    border-radius: 3%;
+}
+
+#contactCenter form{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+
+#contactCenter h2{
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+#contactCenter h1{
+    font-size: 1.1rem;
+    color: #ffffff;
+}
+
+#contactCenter form input,textarea{
+    width:70%;
+    font-size: 1.1rem;
+    padding: 10px;
+    color: black;
+    border-radius: 5px;
+}
+
+#contactCenter form input,textarea::placeholder{
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+#contactCenter form input{
+    height: 3rem;
+}
+
+#contactCenter form textarea{
+   min-height: 4rem;
+}
+
+#contactCenter form button{
     width: 70%;
-    font-size: 1.2rem;
-    font-weight: bolder;
-}
+    height: 50px;
+    font-size: 1.1rem;
+    color: #ffff;
+    background-color: #067ff3;
+ }
 
-#cWrap form button:hover{
-    color: grey;
-}
-
-@media (min-width:250px) and (max-width:1024px){
-    #cWrap{
+ @media(min-width:250px) and (max-width: 1024px){
+    #contactCenter{
         width: 90%;
+        min-height: 450px;
+        gap: 2.5rem;
     }
 
-    #cWrap form input,#cWrap form textarea{
-        width: 100%;
+    #contactCenter form{
+        gap:0.3rem;
     }
-    
-    #cWrap form button{
-        width: 100%;
-        font-size: 1.1rem;
-    }
-}
 
-@media (min-width:250px) and (max-width:480px){
-    #cWrap form input,#cWrap form textarea,#cWrap form input::placeholder,#cWrap form textarea::placeholder{
-        font-size: 0.8rem;
+    #contactCenter form input,textarea{ 
+        width:90%;
+        font-size: 1rem;
+        padding: 15px;
     }
-}
 
-@media (min-width:481px) and (max-width:640px){
-    #cWrap form input,#cWrap form textarea,#cWrap form input::placeholder,#cWrap form textarea::placeholder{
-        font-size: 0.9rem;
-    }
+    #contactCenter form button{
+        width:90%;
+        height: 50px;
+        font-size: 1rem;
+     }
 }

@@ -1,18 +1,17 @@
 import './contact.css'
-
-export const Contact = () => {
+export function Contact(){
     return (
-        <div id="contact">
-            <div id='cWrap'>
-            <h1 id='cHead'>Contact me</h1>
+        <section id="contact">
+            <div id="contactCenter">
+            <h2>Reach Out to us</h2>
+            <h1>send us a message we will respond in minutes </h1>
             <form>
-                <input placeholder="your name"/>
-                <input placeholder="your business name"/>
-                <input placeholder="your email address "/>
-                <textarea placeholder="what do you want to get done" />
-                <button> contact us </button>
+                <input type='text' placeholder="name"/>
+                <textarea type='text' placeholder="message" />
+                <button>submit</button>
             </form>
             </div>
-        </div>
+           
+        </section>
     )
 }

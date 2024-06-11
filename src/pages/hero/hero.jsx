@@ -1,102 +1,79 @@
 import './hero.css'
-import { useState,useEffect,useRef } from 'react'
+import { useState,useRef } from 'react'
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useInView } from "react-intersection-observer";
 
-export const Hero = () => {
-    const [hasScrolled, setHasScrolled] = useState(false);
-    const [isNavActive, setIsNavActive] = useState(false)
-
+export function Hero(){
+    const [navActive,setNavActive] = useState(false)
+    const toggleMobileNav = () => {
+       setNavActive((prev) => !prev)
+    }
     gsap.registerPlugin(useGSAP);
     const container = useRef();
-
-    const toggleNav = () => {
-        setIsNavActive((prev) => !prev)
-    }
-
-    const { ref, inView } = useInView({threshold:0.1});
-
-    useEffect(() => {
-        const handleScroll = () => {
-        const scrollY = window.scrollY;
-        setHasScrolled(scrollY > 50)
-        };
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
+    const { ref, inView } = useInView({threshold:0.5});
     useGSAP(() => {
-        gsap.fromTo('.nav',{ opacity:0, display:'none' }, { opacity:1, display:'flex',duration:2,ease: 'power3.inOut' })
-        gsap.from('#heroWrap', {
-                duration: 1.5,
-                y: '-100vh',
-                ease: 'power3.inOut',
+        gsap.from('#heroOther', {
+                duration: 2.5,
+                y: '-70vh',
+                ease: "bounce.out"
         })
         
         }, { scope: container });
 
-    useGSAP(()=>{
-        gsap.from('.mbi',{
-            duration: 1,
-            x: '-120%',
-            stagger: 0.1, 
-            ease: 'power3.inOut',
-        })
-    },[inView])
-
-
-  
+        useGSAP(()=>{
+            gsap.from('.nmItems',{
+                duration: 1,
+                x: '-50%',
+                stagger: 0.1, 
+                ease: 'power3.inOut',
+            })
+        },[inView])
 
     return (
         <section id="hero" ref={container}>
-             <div className={`nav ${hasScrolled ? 'scrolled' : ''}`}>
-                     <div className='hB'>
-                        
-                        <h1 id='nLeft' className='txtG'>
-                            Grand-Island
-                        </h1>
-                    </div>
-                        <ul>
-                            <li className='bar-item'><a href='#hero'>home</a></li>
-                            <li className='bar-item'><a href='#about'>about</a></li>
-                            <li className='bar-item'><a href='#works'>works</a></li>
-                            <li className='bar-item'><a href='#services'>services</a></li>
-                            <li className='bar-item'><a href='#reviews'>reviews</a></li>
-                            <li className='bar-item'><a href='#contact'>contact</a></li>
+           { navActive? (<div id='navMobile' onClick={toggleMobileNav} ref={ref} >
+                <header>
+                    <h1>Kachi</h1>
+                    <img src='./close.png'/>
+                </header>
+                <ul id='navMobileList'>
+                            <li className='nmItems'><a href='#contact' >contact</a></li>
+                            <li className='nmItems'><a href='#portfolio' >portfolio</a></li>
+                            <li className='nmItems'><a href='#testimonials'>testimonials</a></li>   
+                            <li className='nmItems'><a href='#about'>about</a></li>
+                            <li className='nmItems'><a href='#faq'>faqs</a></li> 
+                            
+                </ul>
+            </div>) :null } 
+
+            <nav id='navbar'>
+                    <div id='navWrap'>
+                        <ul id='navLeft'>
+                            <li><a href='#contact'>contact</a></li>
+                            <li><a href='#portfolio'>portfolio</a></li>
+                            <li><a href='#testimonials'>testimonials</a></li>   
+                            <li><a href='#about'>about</a></li>
+                            <li><a href='#faq'>faqs</a></li>
                         </ul>
-                    <img id='burger' src='./burger.png'  onClick={toggleNav}/>
-                </div>
 
-                { isNavActive && (
-                      <div id='mobileNav'>
-                      <div id='mbWrap' ref={ref}>
-                          <div id='mbWrapH'>
-                              <h1>H<span className='txtG'>arry</span></h1>
-                              <img  src='./close.png' onClick={toggleNav}/>
-                           </div>
-                           <div id='mbWrapB'>
-                              <ul>
-                              <li className='mbi'><a href='#hero'>home</a></li>
-                            <li className='mbi'><a href='#about'>about</a></li>
-                            <li className='mbi'><a href='#works'>works</a></li>
-                            <li className='mbi'><a href='#services'>services</a></li>
-                            <li className='mbi'><a href='#reviews'>reviews</a></li>
-                            <li className='mbi'><a href='#contact'>contact</a></li>
-                              </ul>
-                           </div>
-                      </div>
-                  </div>
-                )}
-              
+                    <h1 id='navCenter'> kachi</h1>
 
-            <div id='heroWrap'>
-                <h1 id='heroWraph1'><span className='txtG'>Grand Island Construction:</span> Your Vision, Our Expertise - Seamless Design & Construction Services Tailored to You</h1>
-                <h1 id='heroWraph2'>transforming your product ideas into clean and functional designs  </h1>
-                <div id='hBtns'>
-                    <button><a href='#services'>our services</a></button>
-                    <button><a href='#contact'>contact us</a></button>
-                </div>
+                    <div id='socialIcons'>
+                        <div className='socialIcon'><img src='./facebook.png' /></div>
+                        <div className='socialIcon'><img src='./instagram.png'/></div>
+                        <div className='socialIcon'><img src='./twitter.png'/></div>
+                    </div>
+
+                    <img id='burger' src='./burger.png' onClick={toggleMobileNav}/>
+                    </div>
+            </nav>
+
+            <div id='heroOther'>
+                <p>hi there, my name is <span id='txtG'>kachi.</span><span className='hIc'><img src='profile.png' /></span> i am an exceptional photographer based in lagos state nigeria...
+                </p>
+                <div id='heroBtn'><span>get in touch</span><img src='./right.png'/></div>
+                
             </div>
         </section>
     )

@@ -2,7 +2,7 @@
     width: 100%;
     height: auto;
     border-radius: 15px;
-    background-color: rgba(29, 28, 28, 0.877);
+    background-color: rgba(117, 27, 117, 0.973);
     padding: 15px 20px;
     display: flex;
     flex-direction: column;
@@ -18,6 +18,7 @@
 .faqUp h1{
     font-size: 1rem;
     line-height: 0px;
+    color: #ffffff;
 }
 
 .faqUp img{
@@ -28,6 +29,7 @@
 
 #faqsP{
     font-size: 1rem;
+    color: #ffffff;
 }
 
 .show{
