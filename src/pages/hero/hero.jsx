@@ -34,7 +34,7 @@ export function Hero(){
         <section id="hero" ref={container}>
            { navActive? (<div id='navMobile' onClick={toggleMobileNav} ref={ref} >
                 <header>
-                    <h1>Kachi</h1>
+                    <h1>vevo</h1>
                     <img src='./close.png'/>
                 </header>
                 <ul id='navMobileList'>
@@ -57,7 +57,7 @@ export function Hero(){
                             <li><a href='#faq'>faqs</a></li>
                         </ul>
 
-                    <h1 id='navCenter'> kachi</h1>
+                    <h1 id='navCenter'> vevo</h1>
 
                     <div id='socialIcons'>
                         <div className='socialIcon'><img src='./facebook.png' /></div>
@@ -70,7 +70,7 @@ export function Hero(){
             </nav>
 
             <div id='heroOther'>
-                <p>hi there, my name is <span id='txtG'>kachi.</span><span className='hIc'><img src='profile.png' /></span> i am an exceptional photographer based in lagos state nigeria...
+                <p> <span id='txtG'>vevo-studios</span><span className='hIc'><img src='profile.png' /></span>  we are an exceptional photography brand based in lagos state nigeria...
                 </p>
                 <div id='heroBtn'><span>get in touch</span><img src='./right.png'/></div>
                 

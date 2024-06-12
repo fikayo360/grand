@@ -21,17 +21,17 @@ const Extra1 = () => {
 
     return (
         <section id='extra' ref={container}>
-                <p id='e' className='bt'>"If I could give Kachi and his photography business more than five stars,
-                     I would do it in a heartbeat! From start to finish, Kachi has been an absolute dream to work with, and his talent behind the lens is truly unparalleled.
+                <p id='e' className='bt'>"If I could give vevo studios and his photography business more than five stars,
+                     I would do it in a heartbeat! From start to finish, vevo studios has been an absolute dream to work with, and his talent behind the lens is truly unparalleled.
 
-                    From the moment we met Kachi, it was clear that he wasn't just
+                    From the moment we met vevo studios, it was clear that he wasn't just
                     another photographer – he's a true artist who pours his heart and soul into his craft. 
                     His passion for capturing the beauty and emotion of every moment shines through in every single photograph he takes.
 
-                    Leading up to our big day, Kachi took the time to understand our vision and preferences, 
-                    ensuring that every shot reflected our unique style and personality. On the day of the wedding, Kachi and his team were an absolute joy to have around – professional, attentive, and incredibly talented.
+                    Leading up to our big day, vevo studios took the time to understand our vision and preferences, 
+                    ensuring that every shot reflected our unique style and personality. On the day of the wedding, vevo studios and his team were an absolute joy to have around – professional, attentive, and incredibly talented.
 
-                    But it's not just about the technical skill – Kachi has an incredible ability to make you feel comfortable and at
+                    But it's not just about the technical skill – vevo studios has an incredible ability to make you feel comfortable and at
                     ease in front of the camera, capturing the most authentic and heartfelt moments that we will treasure for a lifetime.
                 </p>
             <h1 className='bt'>Matt & ashley</h1>
