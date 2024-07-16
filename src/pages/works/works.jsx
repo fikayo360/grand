@@ -10,7 +10,7 @@ export const Works = () => {
             <main id='worksM'>
                 <div id='wrks'>
                 <div className='wrkItem'>
-                    <img  src='https://static.showit.co/1200/dAZCiIngTi2LiaHXQbYGxg/135405/aspen_19.jpg'/>
+                    <img  src='https://hips.hearstapps.com/hmg-prod/images/fairy-and-j-1579625040.jpeg?crop=0.668xw:1.00xh;0.167xw,0&resize=1200:*'/>
                     <div className='wrkTxt'>
                     <h1>malcolm & jessica </h1>
                     <span>june 23,2022</span>

@@ -97,6 +97,6 @@ export const Footer = () => {
                 </div>
             </main> 
             
-        </section>
+        </section>   
     )
 }
