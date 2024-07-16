@@ -1,40 +1,102 @@
 import './footer.css'
-import { useInView } from 'react-intersection-observer';
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { useInView } from "react-intersection-observer";
+import ScrollTrigger from 'gsap/src/ScrollTrigger';
 
-export function Footer(){
-    const [ref, inView] = useInView();
-    return (
-        <section id='footer' >
-         
-           <h6 id='footerName' ref={ref} className={`${inView?'animate__animated animate__fadeInDown animate__slow':''}`}>
-            vevo*<span className='hIc'><img src='profile.png' /></span>*studios</h6>
-{/*             
-            <div id="footerBot">
-                <div className='footerItems'>
-                    <h2 id='letsWork' className='footerHeads'>lets work together </h2>
+export const Footer = () => {
+    gsap.registerPlugin(useGSAP);
+    gsap.registerPlugin(ScrollTrigger)
+    const isMobile = () => window.innerWidth <= 768; 
+    useGSAP(()=>{
+        gsap.fromTo(".upp",
+            { y: 0 },
+            {
+              y: -5, 
+              duration: 2,
+              ease: "bounce",
+              repeat: -1, 
+            }
+          );
+    })
+
+    useGSAP(()=>{
+        gsap.from(".fT",{
+            scrollTrigger: {
+                trigger: '#footer',
+                start: 'top top', 
+            },
+            y:isMobile?'-20':'-40',
+            duration:1,
+            ease:'power1.in'
+        });
+    },[])
+   
+
+    return(
+        <section id='footer'>
+            <header>
+                <div id='hW'>
+                <h1>want to work together on your project? </h1>
+                <div id='hb'>
+                    <textarea name="" id="" placeholder='send a message'></textarea>
+                    <div id='hbic'>
+                        <div className='cover'></div>
+                        <img src='./right-arrow.png'/>
+                    </div>
+                </div>
+                </div>
+            </header>
+
+            <main>
+                <div id='mwrap'>
+                    <div className='mwrapi'>
+                        <h1>useful links</h1>
+                    </div>
+
+                    <div  className='mwrapi'>
+                        <h1>contact</h1>
+                        <p>
+                            you can find our office address @ 27, glourious hope avenue mobalaji thomas roundabout off iyana ejigbo close agric,Ikorodu lagos state nigeria
+                        </p>
+                    </div>
+
+                    <div  className='mwrapi'>
+                        <h1>sitemap</h1>
+                        <ul>
+                            <li><a href='#hero'>Home</a></li>
+                            <li><a href='#about'>about</a></li>
+                            <li><a href='#reviews'>testimonials</a></li>
+                            <li><a href='#works'>works</a></li>
+                            <li><a href='#services'>services</a></li>
+                        </ul>
+                    </div>
+
+                    <div  className='mwrapi'>
+                        <h1>follow us</h1>
+                        <ul>
+                            <li><a href="">instagram</a></li>
+                            <li><a href="">facebook</a></li>
+                            <li><a href="">linkedin</a></li>
+                            <li><a href="">pintrest</a></li>
+                            <li><a href="">dribble</a></li>
+                        </ul>
+                    </div>
+
                 </div>
 
-                <div className='footerItems'>
-                    <h2 className='footerHeads'>sitemap </h2>
-                    <ul>
-                        <li><a href='#hero'>home</a></li>
-                        <li><a href='#about'>about</a></li>
-                        <li><a href='#portfolio'>portfolio</a></li>
-                        <li><a href='#testimonials'>testimonials</a></li>
-                        <li><a href='#contact'>contact</a></li>
-                    </ul>
+                <div id='mfb'>
+                    <h1 className='fT'>Elliot Jonckers </h1>
+                    <div id='mfbL'>
+                        <p>All rights reserved 2024</p>
+                        <div id='lr'>
+                            <span><a href='#hero'>back to top</a></span>
+                            <div id='lrb'><img className='upp' src='./upp.png' /></div>
+                        </div>
+                    </div>
                 </div>
-
-                <div className='footerItems'>
-                    <h2 className='footerHeads'>socials</h2>
-                    <ul>
-                    <li><a>facebook</a></li>
-                    <li><a>twitter</a></li>
-                    <li><a>instagram</a></li>
-                    <li><a>dribble</a></li>
-                    </ul>
-                </div>
-            </div> */}
+            </main>
+            
         </section>
     )
 }

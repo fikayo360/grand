@@ -3,23 +3,40 @@
     height: auto;
     display: flex;
     justify-content: center;
-    padding:4rem 0 2rem 0;
-    background: linear-gradient(327.21deg, rgba(33, 0, 75, 0.24) 3.65%, rgba(60, 0, 136, 0) 40.32%),
-    linear-gradient(245.93deg, rgba(209, 21, 111, 0.16) 0%, rgba(209, 25, 80, 0) 36.63%), linear-gradient(147.6deg, rgba(58, 19, 255, 0) 29.79%,
-     rgba(98, 19, 255, 0.01) 85.72%), #13111C;
+    padding-top:4rem;
+    padding-bottom: 2rem;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+#faqB{
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 2rem;
+    background-color: black;
+    align-items: center;
+}
+
+#faqB h1{
+    color: #ffffff;
+    font-size: clamp(3em, 10vw, 18em);
 }
 
 #faqWrap{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 1rem;
-    width: 50%;
+    width: 100%;
     text-align: left;
+    padding-top: 2rem;
+    padding-left: 5rem;
 }
 
 #faqH{
     font-size: 1.2rem;
-    color: aliceblue;
 }
 
 #faqContainer{
@@ -30,6 +47,8 @@
 
 @media (min-width:250px) and (max-width:1024px){
     #faqWrap{
-        width: 90%;
+        padding-top: 2rem;
+        padding-left: 2rem;
     }
 }
+

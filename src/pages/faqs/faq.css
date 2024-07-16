@@ -1,8 +1,8 @@
 #faqs{
-    width: 100%;
+    width: 60%;
     height: auto;
     border-radius: 15px;
-    background-color: rgba(117, 27, 117, 0.973);
+    background-color: black;
     padding: 15px 20px;
     display: flex;
     flex-direction: column;
@@ -16,7 +16,7 @@
 }
 
 .faqUp h1{
-    font-size: 1rem;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
     line-height: 0px;
     color: #ffffff;
 }
@@ -28,19 +28,25 @@
 }
 
 #faqsP{
-    font-size: 1rem;
+    font-size: clamp(1rem, 3vw, 1.8rem);
     color: #ffffff;
+   
 }
 
 .show{
     display: block;
-    opacity: 1;
 }
 
 .hide{
     display: none;
 }
 
+
+@media (min-width:250px) and (max-width:768px){
+    #faqs{
+        width: 80%;
+    }
+}
 
 @media (min-width:250px) and (max-width:480px){
     .faqUp h1{
